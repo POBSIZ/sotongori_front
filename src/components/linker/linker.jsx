@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import home from '../pages/home/home';
 import NewTest from '../pages/test/new';
+import Chart from '../pages/chart/chart';
 
 import './assets/style.scss';
 
@@ -15,7 +16,7 @@ class Linker extends React.Component {
             <main className="main">
                 <Switch>
                     <Route exact path="/" component={home}/>
-                    <Route path="/new/:data" component={NewTest}/>
+                    <Route path="/chart/:data" component={Chart}/>
                 </Switch>
             </main>
         );
