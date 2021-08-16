@@ -7,7 +7,7 @@ import Header from '../base/header/header'
 import Footer from '../base/footer/footer'
 import Linker from '../linker/linker'
 
-import './assets/App.scss';
+// import './assets/App.scss';
 
 class App extends React.Component {
     render() {

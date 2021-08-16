@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
+import './assets/css/style.scss'
 
 class Footer extends React.Component {
     render() {

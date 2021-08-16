@@ -1,11 +1,70 @@
-.organ-name{
-    font-size: 40px;
-    font-weight: bold;
+.organ_banner{
+    // position: relative;
+    // left: -5.5%;
+    // width: 100vw;
+    // height: 300px;
+    // overflow: hidden;
+
+    width: 100%;
+    margin: 100px auto;
+
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
+    .banner-inwrapper{
+        color: #fff;
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+        height: 300px;
+        backdrop-filter: blur(5px) brightness(70%);
+
+        display: flex;
+        justify-content: space-evenly;
+
+        .organ-name{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .organ-attr{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .attr-itm{
+                // text-align: center;
+                // width: 80%;
+                font-size: 20px;
+                font-weight: lighter;
+                margin: 5px 0;
+                line-height: 40px;
+
+                strong{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.to-home{
+    position: absolute;
+    z-index: 10;
+    padding: 5px;
+    color: #fff;
+    font-size: 35px !important;
 }
 
 .chart{
+    margin: 100px 0;
     .highcharts-title{
-        font-size: 30px !important;
+        // font-size: 30px !important;
         font-weight: bold;
         line-height: 30px;
     }
@@ -17,4 +76,22 @@
         font-size: 15px;
         font-weight: 500;
     }
+}
+
+@media screen and (max-width: 700px) {
+    .organ_banner{
+        .banner-inwrapper{
+            flex-flow: column;
+
+            .organ-name{
+                line-height: 50px;
+            }
+
+            .organ-attr{
+                text-align: center;
+            }
+        }
+
+    }
+    
 }

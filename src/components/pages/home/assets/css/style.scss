@@ -1,9 +1,16 @@
 $shadow-color: rgba(56, 56, 56, 0.3);
 
+.organ-title{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+}
 .organ_list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 50px 0;
 
     .organ {
         cursor: pointer;
@@ -51,4 +58,21 @@ $shadow-color: rgba(56, 56, 56, 0.3);
             }
         }
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .organ_list {
+        .organ {
+            width: calc(100% / 2);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .organ_list {
+        .organ {
+            width: calc(100%);
+        }
+    }
+    
 }
