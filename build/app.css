@@ -2,37 +2,52 @@
   font-family: "GmarketSans";
   padding: 0 5%;
   width: 100%;
-  height: 370px;
-  background-color: #fff;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+  color: #fff;
+}
+.header .header-inwrapper {
+  position: absolute;
+  backdrop-filter: blur(5px) brightness(60%);
+  -webkit-backdrop-filter: blur(5px) brightness(60%);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  font-size: 10px;
 }
-.header .header_content {
+.header .header-inwrapper .header_content {
   width: fit-content;
   margin: auto;
 }
-.header .header_content .logo {
-  color: #000;
+.header .header-inwrapper .header_content .logo {
+  color: #fff;
   text-align: center;
-  font-size: 100px;
+  font-size: 10em;
   line-height: 120px;
   font-weight: bolder;
 }
-.header .header_content .organ_changer {
+.header .header-inwrapper .header_content .organ_changer {
   width: 100%;
   height: 50px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
-.header .header_content .organ_changer span {
+.header .header-inwrapper .header_content .organ_changer span {
   position: relative;
   z-index: 1;
-  font-size: 35px;
+  font-size: 3.5em;
   font-weight: bold;
   line-height: 50px;
-  background-color: #fff;
-  padding: 0 10px 0 0;
+  padding: 0 5px;
 }
-.header .header_content .organ_changer .organ-list {
+.header .header-inwrapper .header_content .organ_changer .organ-list {
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -42,66 +57,127 @@
   line-height: 50px;
   overflow: hidden;
 }
-.header .header_content .organ_changer .organ-list .list-wrapper {
+.header .header-inwrapper .header_content .organ_changer .organ-list .list-wrapper {
   position: relative;
   transition: all 0.5s;
 }
-.header .header_content .organ_changer .organ-list .list-wrapper .organ {
+.header .header-inwrapper .header_content .organ_changer .organ-list .list-wrapper .organ {
   display: block;
   font-weight: bold;
-  background-color: #fff;
   margin: 0;
-  padding: 0 0 0 10px;
+  padding: 0 5px;
   line-height: 50px;
-  font-size: 35px;
+  font-size: 3.5em;
 }
-.header .header_content .organ_changer .line {
+.header .header-inwrapper .header_content .organ_changer .line {
+  position: relative;
   z-index: 0;
   display: inline-block;
-  background-color: #000;
-  margin: 0;
-  bottom: 235px;
-  width: 100%;
+  background-color: #fff;
+  margin-bottom: 8px;
+  top: 50%;
+  width: 260px;
   height: 4px;
 }
-.header .project_info {
+.header .header-inwrapper .project_info {
   display: flex;
   justify-content: space-between;
   line-height: 80px;
 }
-.header .project_info .info-num {
-  font-size: 28px;
+.header .header-inwrapper .project_info .info-num {
+  font-size: 2.5em;
   font-weight: bolder;
 }
-.header .project_info .info-text {
+.header .header-inwrapper .project_info .info-text {
   text-align: right;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 1.16em;
   line-height: 15px;
   width: 420px;
   padding: 15px 0;
 }
-.header .line {
+.header .header-inwrapper .line {
   z-index: 0;
-  background-color: #000;
+  background-color: #fff;
   margin: 0;
   width: 100%;
   height: 2px;
 }
-.header .total {
+.header .header-inwrapper .total {
   text-align: center;
-  font-size: 30px;
+  font-size: 3em;
   line-height: 50px;
   margin-top: 20px;
   font-weight: lighter;
 }
-.header .total strong {
+.header .header-inwrapper .total strong {
   font-weight: bold;
 }
+.header .header-inwrapper .down {
+  font-size: 4em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  bottom: 20px;
+  -webkit-animation: 0.8s ease-in-out 0s infinite alternate scroll_down;
+  animation: 0.8s ease-in-out 0s infinite alternate scroll_down;
+}
+@-webkit-keyframes scroll_down {
+  from {
+    bottom: 5px;
+  }
+  to {
+    bottom: 20px;
+  }
+}
+@keyframes scroll_down {
+  from {
+    bottom: 5px;
+  }
+  to {
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header-inwrapper {
+    font-size: 4.5px !important;
+  }
+  .header-inwrapper .header_content .logo {
+    line-height: 50px !important;
+  }
+  .header-inwrapper .header_content .organ_changer .line {
+    width: 100px !important;
+    height: 2px !important;
+  }
+  .header-inwrapper .header_content .project_info .info-text {
+    width: 200px;
+    font-size: 1px;
+    font-weight: lighter;
+  }
+}
+@media screen and (min-width: 700px) {
+  .header-inwrapper {
+    font-size: 10px !important;
+  }
+}
+.footer {
+  min-height: 400px;
+  background-color: #e9e9e9;
+}
+.organ-title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+}
+
 .organ_list {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 50px 0;
 }
 .organ_list .organ {
   cursor: pointer;
@@ -142,13 +218,68 @@
 .organ_list .organ .organ_info .info-text {
   font-size: 12px;
 }
-.organ-name {
+
+@media screen and (max-width: 1000px) {
+  .organ_list .organ {
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 700px) {
+  .organ_list .organ {
+    width: calc(100%);
+  }
+}
+.organ_banner {
+  width: 100%;
+  margin: 100px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.organ_banner .banner-inwrapper {
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  height: 300px;
+  backdrop-filter: blur(5px) brightness(70%);
+  display: flex;
+  justify-content: space-evenly;
+}
+.organ_banner .banner-inwrapper .organ-name {
   font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 300px;
+}
+.organ_banner .banner-inwrapper .organ-attr {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.organ_banner .banner-inwrapper .organ-attr .attr-itm {
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 5px 0;
+  line-height: 40px;
+}
+.organ_banner .banner-inwrapper .organ-attr .attr-itm strong {
   font-weight: bold;
 }
 
+.to-home {
+  position: absolute;
+  z-index: 10;
+  padding: 5px;
+  color: #fff;
+  font-size: 35px !important;
+}
+
+.chart {
+  margin: 100px 0;
+}
 .chart .highcharts-title {
-  font-size: 30px !important;
   font-weight: bold;
   line-height: 30px;
 }
@@ -160,8 +291,22 @@
   font-size: 15px;
   font-weight: 500;
 }
+
+@media screen and (max-width: 700px) {
+  .organ_banner .banner-inwrapper {
+    flex-flow: column;
+  }
+  .organ_banner .banner-inwrapper .organ-name {
+    line-height: 50px;
+  }
+  .organ_banner .banner-inwrapper .organ-attr {
+    text-align: center;
+  }
+}
 .main {
-  padding: 30px 5%;
+  overflow: hidden;
+  padding: 0 5%;
+  min-height: 110vh;
 }
 :root {
   --shadow-color: rgba(56, 56, 56, 0.3);
@@ -184,6 +329,13 @@
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
   font-style: lighter;
   font-weight: lighter;
+}
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
 }
 * {
   font-family: "GmarketSans";
@@ -244,4 +396,27 @@ table {
 .line {
   position: relative;
   border: none;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }

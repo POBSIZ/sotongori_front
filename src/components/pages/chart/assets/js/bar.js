@@ -14,6 +14,7 @@ const BarChartGen = async (urlname, organ_name) => {
 
     await organ.map(item => {
         organData.push(item.temp[0])
+        // console.log(new Date(item.temp[0][0]).toString())
     })
 
     // console.log(organData)

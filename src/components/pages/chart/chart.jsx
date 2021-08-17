@@ -21,6 +21,7 @@ class Chart extends React.Component {
         super(props);
         this.state={
             organ: 'default',
+            organ_visit: '',
         }
     }
 
@@ -38,10 +39,22 @@ class Chart extends React.Component {
             }
         });
         var organName = await getName.json();
+
+        const urlV=`http://3.35.243.239/api/visitor/${this.props.match.params.data}`
+        const getVisit = await fetch(urlV, {
+            method: 'GET',
+            mode: 'cors',
+            headers : {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+        var visitInfo = await getVisit.json();
         await this.setState({
             organ: organName.name,
+            organ_visit: visitInfo,
         })
-        // console.log(organName)
+        console.log(visitInfo)
         ScatterChartGen(this.props.match.params.data);
         StockChartGen(this.props.match.params.data, this.state.organ)
         BarChartGen(this.props.match.params.data, this.state.organ)
@@ -57,10 +70,10 @@ class Chart extends React.Component {
                     <div className="banner-inwrapper">
                         <h1 className="organ-name">{this.state.organ}</h1>
                         <div className="organ-attr">
-                            <p className="attr-itm">누적 방문자수 <strong>100</strong>명</p>
-                            <p className="attr-itm">일일 방문자수 <strong>80</strong>명</p>
-                            <p className="attr-itm">일일 평균 방문자수 <strong>80</strong>명</p>
-                            <p className="attr-itm">일일 최대 방문자수 <strong>80</strong>명</p>
+                            <p className="attr-itm">누적 방문자수 <strong>{this.state.organ_visit.totaluser}</strong>명</p>
+                            <p className="attr-itm">일일 방문자수 <strong>{this.state.organ_visit.todayuser}</strong>명</p>
+                            <p className="attr-itm">일일 평균 방문자수 <strong>{this.state.organ_visit.avguser}</strong>명</p>
+                            <p className="attr-itm">일일 최대 방문자수 <strong>{this.state.organ_visit.maxuser}</strong>명</p>
                         </div>
                     </div>
                 </section>

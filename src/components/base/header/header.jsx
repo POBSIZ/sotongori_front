@@ -89,7 +89,7 @@ class Header extends React.Component {
                 })
             }
             i++;
-        }, 3000);
+        }, 4000);
     }
 
     async componentDidMount(){
