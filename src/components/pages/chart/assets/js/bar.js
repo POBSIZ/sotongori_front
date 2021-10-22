@@ -1,5 +1,8 @@
+import urlAdr from "../../../../../url";
+
 const BarChartGen = async (urlname, organ_name) => {
-    const url = `http://3.35.243.239/api/info?search=${urlname}`
+    console.log(urlname)
+    const url = `${urlAdr}/api/sotong/info/${urlname}`
     const getName = await fetch(url, {
         method: 'GET',
         mode: 'cors',

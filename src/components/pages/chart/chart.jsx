@@ -13,6 +13,8 @@ import ScatterChartGen from './assets/js/scatter';
 import StockChartGen from './assets/js/stock';
 import BarChartGen from './assets/js/bar';
 
+import urlAdr from '../../../url';
+
 class Chart extends React.Component {
 
     props = this.props;
@@ -29,7 +31,7 @@ class Chart extends React.Component {
 
     async componentDidMount(){
         // const url=`http://3.35.243.239/api/info?search=${this.props.match.params.data}`
-        const url=`http://3.35.43.53/api/organ/${this.props.match.params.data}`
+        const url=`${urlAdr}/api/sotong/organ/${this.props.match.params.data}`
         const getName = await fetch(url, {
             method: 'GET',
             mode: 'cors',
@@ -40,7 +42,7 @@ class Chart extends React.Component {
         });
         var organName = await getName.json();
 
-        const urlV=`http://3.35.243.239/api/visitor/${this.props.match.params.data}`
+        const urlV=`${urlAdr}/api/sotong/visitor/${this.props.match.params.data}`
         const getVisit = await fetch(urlV, {
             method: 'GET',
             mode: 'cors',

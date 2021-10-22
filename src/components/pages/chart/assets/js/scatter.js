@@ -1,6 +1,8 @@
+import urlAdr from "../../../../../url";
+
 const ScatterChartGen = async (urlname) => {
 
-    const url = `http://3.35.243.239/api/info?search=${urlname}`
+    const url = `${urlAdr}/api/sotong/info?search=${urlname}`
     const getName = await fetch(url, {
         method: 'GET',
         mode: 'cors',

@@ -12,6 +12,8 @@ import won from './assets/img/won.jpg'
 // import CSS
 import './assets/style.scss'
 
+import urlAdr from '../../../url';
+
 class OrganChanger extends React.Component {
     props = this.props;
     constructor(props) {
@@ -93,7 +95,7 @@ class Header extends React.Component {
     }
 
     async componentDidMount(){
-        const url = 'http://3.35.243.239/api/usercnt/'
+        const url = `${urlAdr}/api/sotong/usercnt/`
         const getTotal = await fetch(url, {
             method: 'GET',
             mode: 'cors',
