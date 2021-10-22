@@ -7,7 +7,8 @@ const StockChartGen = async (urlname, organ_name) => {
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            Authorization: `jwt ${localStorage.getItem('token')}`
         }
     });
     var organ = await getName.json();

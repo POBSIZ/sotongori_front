@@ -37,7 +37,8 @@ class Chart extends React.Component {
             mode: 'cors',
             headers : {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                Authorization: `jwt ${localStorage.getItem('token')}`
             }
         });
         var organName = await getName.json();
@@ -48,7 +49,8 @@ class Chart extends React.Component {
             mode: 'cors',
             headers : {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                Authorization: `jwt ${localStorage.getItem('token')}`
             }
         });
         var visitInfo = await getVisit.json();

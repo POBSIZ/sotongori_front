@@ -1,14 +1,14 @@
 import urlAdr from "../../../../../url";
 
 const BarChartGen = async (urlname, organ_name) => {
-    console.log(urlname)
-    const url = `${urlAdr}/api/sotong/info/${urlname}`
+    const url = `${urlAdr}/api/sotong/info?search=${urlname}`
     const getName = await fetch(url, {
         method: 'GET',
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            Accept: 'application/json',
+            Authorization: `jwt ${localStorage.getItem('token')}`
         }
     });
     var organ = await getName.json();
