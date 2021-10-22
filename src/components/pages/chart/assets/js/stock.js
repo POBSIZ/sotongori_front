@@ -47,36 +47,20 @@ const StockChartGen = async (urlname, organ_name) => {
 
         rangeSelector: {
             allButtonsEnabled: true,
-            buttons: [{
-                type: 'day',
-                count: 1,
-                text: 'Day',
-                dataGrouping: {
-                    forced: true,
-                    units: [
-                        ['sec', [1]]
-                    ]
-                }
-            }, {
-                type: 'year',
-                count: 1,
-                text: 'Week',
-                dataGrouping: {
-                    forced: true,
-                    units: [
-                        ['week', [1]]
-                    ]
-                }
-            }, {
-                type: 'all',
-                text: 'Month',
-                dataGrouping: {
-                    forced: true,
-                    units: [
-                        ['month', [1]]
-                    ]
-                }
-            }],
+            buttons: [
+
+                {
+                    type: 'all',
+                    text: 'All',
+                    dataGrouping: {
+                        forced: true,
+                        units: [
+                            ['sec', [1]]
+                        ]
+                    }
+                },
+
+            ],
             buttonTheme: {
                 width: 60
             },

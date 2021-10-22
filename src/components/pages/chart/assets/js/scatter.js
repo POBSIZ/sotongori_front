@@ -50,14 +50,14 @@ const ScatterChartGen = async (urlname) => {
             }
         },
         legend: {
-            layout: 'vertical',
-            align: 'left',
-            verticalAlign: 'top',
+            // layout: 'vertical',
+            // align: 'left',
+            // verticalAlign: 'top',
             // x: 100,
             // y: 70,
-            floating: true,
-            backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
-            borderWidth: 1
+            // floating: true,
+            // backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+            // borderWidth: 1
         },
         plotOptions: {
             scatter: {

@@ -29,7 +29,7 @@ class Chart extends React.Component {
 
     async componentDidMount(){
         // const url=`http://3.35.243.239/api/info?search=${this.props.match.params.data}`
-        const url=`http://3.35.243.239/api/organ/${this.props.match.params.data}`
+        const url=`http://3.35.43.53/api/organ/${this.props.match.params.data}`
         const getName = await fetch(url, {
             method: 'GET',
             mode: 'cors',
@@ -54,7 +54,7 @@ class Chart extends React.Component {
             organ: organName.name,
             organ_visit: visitInfo,
         })
-        console.log(visitInfo)
+        // console.log(visitInfo)
         ScatterChartGen(this.props.match.params.data);
         StockChartGen(this.props.match.params.data, this.state.organ)
         BarChartGen(this.props.match.params.data, this.state.organ)

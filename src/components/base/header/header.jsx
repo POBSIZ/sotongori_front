@@ -48,11 +48,11 @@ class OrganChanger extends React.Component {
                 <hr className="line"/>
                 <ul className="organ-list">
                     <div className="list-wrapper" style={{bottom: this.state.top}}>
-                        <li className="organ">카페 보벨르</li>
+                        <li className="organ">든솔 아카데미</li>
+                        <li className="organ">청소년 수련관</li>
                         <li className="organ">비타민 의원</li>
-                        <li className="organ">방과후 든솔</li>
-                        <li className="organ">동아대학교</li>
-                        <li className="organ">해운대 구청</li>
+                        <li className="organ">카페 보벨르</li>
+                        <li className="organ">경성대학교</li>
                     </div>
                 </ul>
             </section>
