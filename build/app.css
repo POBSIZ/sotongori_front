@@ -192,7 +192,7 @@
 .organ_list .organ .organ-img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .organ_list .organ .organ_info {
   color: #000;

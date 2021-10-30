@@ -29,7 +29,7 @@ const BarChartGen = async (urlname, organ_name) => {
             new Date(item.temp[0][0]).getSeconds(),
         )
         // console.log(du)
-        console.log(new Date(item.temp[0][0]).toString().trim('hour'))
+        // console.log(new Date(item.temp[0][0]).toString().trim('hour'))
 
         new Date(item.temp[0][0]).getHours() == prev_hr  ? 
             varArr.push([ 

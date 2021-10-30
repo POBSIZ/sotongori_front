@@ -10,12 +10,12 @@ module.exports = {
     entry: [
         'babel-polyfill',
         // './src/index.tsx',
-        './src/index.jsx'
+        './src/index.jsx',
     ],
     output: {
         path: __dirname + '/build',
         filename: 'app.js',
-        publicPath: '/'
+        // publicPath: './'
     },
     resolve: {
         alias: {
@@ -47,15 +47,15 @@ module.exports = {
                 test: /\.(css|scss)$/,
                 // use: ['style-loader', 'css-loader'],
                 use: [
-                    MiniCssExtractPlugin.loader, 
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'  
+                    'sass-loader'
                 ],
             },
             { // URL LOADER
                 // test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)?$/,
-                loader: 'url-loader', 
+                loader: 'url-loader',
                 options: {
                     name: 'src/[name].[ext]',
                     fallback: 'file-loader',

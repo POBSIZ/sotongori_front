@@ -9,8 +9,6 @@ import './index.scss';
 
 const rootElement = document.getElementById('container');
 ReactDOM.render(
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>,
+        <App />,
     rootElement
 );
