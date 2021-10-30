@@ -8,7 +8,7 @@ const BarChartGen = async (urlname, organ_name) => {
         headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
-            Authorization: `jwt ${localStorage.getItem('token')}`
+            // Authorization: `jwt ${localStorage.getItem('token')}`
         }
     });
     var organ = await getName.json();

@@ -61,11 +61,11 @@ const Chart = (props) => {
             }
         });
         var visitInfo = await getVisit.json();
-        setOrgan(organName.name);
-        setOrganVisit(visitInfo);
-        setOrganUrl(imgUrl);
+        await setOrgan(organName.name);
+        await setOrganVisit(visitInfo);
+        await setOrganUrl(imgUrl);
 
-        ScatterChartGen(props.match.params.data);
+        ScatterChartGen(props.match.params.data, organ);
         StockChartGen(props.match.params.data, organ)
         BarChartGen(props.match.params.data, organ)
     }, []);

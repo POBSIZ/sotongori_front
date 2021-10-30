@@ -9,7 +9,7 @@ const ScatterChartGen = async (urlname) => {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            Authorization: `jwt ${localStorage.getItem('token')}`
+            // Authorization: `jwt ${localStorage.getItem('token')}`
         }
     });
     var organ = await getName.json();
